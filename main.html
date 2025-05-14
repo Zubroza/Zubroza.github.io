@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>NameGen</title>
+</head>
+<body>
+    <h1>Генератор имен, ников, кличек - NameGen</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        
+        <fieldset>
+            <legend>Что сгенерировать:</legend>
+            <label><input type="radio" name="tname" value="nikname" checked>Никнейм</label>
+            <label><input type="radio" name="tname" value="name">Имя</label>
+            <label><input type="radio" name="tname" value="animal"> Кличку</label>
+        </fieldset><br>
+
+        
+        <label for="length">Длина</label>
+      <div>
+        <span>От</span>
+        <input type="number" id="length-min" name="length-min" min="2" max="12" value="2">
+        <span>до</span>
+        <input type="number" id="length-max" name="length-max" min="3" max="15" value="8">
+        <span>букв</span>
+      </div>
+    
+    </form>
+</body>
+</html>
