@@ -3,29 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <title>NameGen</title>
 </head>
 <body>
-    <h1>Генератор имен, ников, кличек - NameGen</h1>
+    <h1>Генератор имен, ников - NameGen</h1>
     <form action="/submit" method="post" enctype="multipart/form-data">
         
         <fieldset>
             <legend>Что сгенерировать:</legend>
             <label><input type="radio" name="tname" value="nikname" checked>Никнейм</label>
             <label><input type="radio" name="tname" value="name">Имя</label>
-            <label><input type="radio" name="tname" value="animal"> Кличку</label>
         </fieldset><br>
 
+        <fieldset>
+            <legend> Язык:</legend>
+            <label><input type="radio" name="lang" value="Eng" checked>English</label>
+            <label><input type="radio" name="lang" value="Rus">Русский</label>
+        </fieldset><br>
+
+        <label for="length">Длина</label><br>
+            <div>
+                <span>От</span>
+                <input type="number" id="length-min" name="length-min" min="2" max="12" value="2">
+                <span>до</span>
+                <input type="number" id="length-max" name="length-max" min="3" max="15" value="8">
+                <span>букв</span>
+            </div><br>
+
+        <label>Настройки:</label><br><br>
+        <fieldset>
+            <legend>Регистр:</legend>
+                <label><input type="radio" name="register" id="capitals" checked> Только заглавные (А)</label>
+                <label><input type="radio" name="register" id="lowercase"> Только строчные (а)</label>
+                <label><input type="radio" name="register" id="both_reg"> Заглавные и строчные (Аа)</label><br><br>
+        </fieldset><br>
+
+        <label><input type="checkbox" name="numbers_on" id="numbers"> Цифры</label><br>
+        <label><input type="checkbox" name="specials_on" id="specials"> Спецсимволы</label><br><br>
         
-        <label for="length">Длина</label>
-      <div>
-        <span>От</span>
-        <input type="number" id="length-min" name="length-min" min="2" max="12" value="2">
-        <span>до</span>
-        <input type="number" id="length-max" name="length-max" min="3" max="15" value="8">
-        <span>букв</span>
-      </div>
+        <label>Префикс:</label>
+        <input type="text" placeholder="xX_">
+        <label>Суффикс:</label>
+        <input type="text" placeholder="_Xx"> <br><br>
+        
+        <button>Генерировать</button>
+        
     
     </form>
 </body>
