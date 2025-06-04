@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О сайте - Генератор имен и никнеймов</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__content container">
+      <div class="header__title-group">
+        <a href="index.html" class="header__main-title">Генератор имен и никнеймов</a>
+        <span class="header__nextgen-title">NameGen</span> 
+      </div>
+      <nav class="header__nav">
+        <a href="namegen.html" class="header__nav-item">Генератор имен</a>
+        <a href="nicknamegen.html" class="header__nav-item">Генератор никнеймов</a>
+        <a href="saved.html" class="header__nav-item">Сохраненные</a>
+        <a href="about.html" class="header__nav-item">О сайте</a>
+        <button id="theme-toggle" class="theme-toggle">Переключить тему</button> 
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content container">
+    <section class="content-section">
+      <h1 class="content-section__title">О сайте</h1>
+      <p class="content-section__paragraph">
+        Добро пожаловать на сайт.Этот инструмент был создан, чтобы помочь вам легко и быстро
+        генерировать имена и никнеймы для любых целей. Будь то игровые персонажи,
+        профили в социальных сетях, творческие псевдонимы или что-то еще — этот генератор
+        предложит вам множество вариантов.
+      </p>
+      <h2 class="content-section__subtitle">Возможности:</h2>
+      <ul class="content-section__list">
+        <li class="content-section__list-item">
+          <strong>Генерация имен:</strong> Создавайте имена на английском и русском языках.
+          Вы можете задать желаемую длину имени и даже указать первую букву.
+        </li>
+        <li class="content-section__list-item">
+          <strong>Генерация никнеймов:</strong> Придумывайте уникальные никнеймы.
+          Комбинируйте буквы разного регистра, добавляйте цифры, специальные символы и даже смайлы.
+          Для большей персонализации можно использовать собственные префиксы и суффиксы.
+        </li>
+        <li class="content-section__list-item">
+          <strong>Сохранение избранного:</strong> Понравившиеся имена и никнеймы можно сохранить
+          в специальный список, чтобы легко вернуться к ним в любое время.
+        </li>
+      </ul>
+      <p class="content-section__paragraph">
+        Надеемся, что наш инструмент будет полезен для вас!
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Генератор имен и никнеймов - NameGen. Все права защищены.</p>
+    </div>
+  </footer>
+
+  
+  <script src="js/theme-manager.js" defer></script>
+  <script src="js/saved-items-manager.js" defer></script>
+  <script src="js/namegenerator.js" defer></script>
+  <script src="js/centercontrol.js" defer></script>
+</body>
+</html>

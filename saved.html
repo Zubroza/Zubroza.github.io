@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сохраненные - Генератор имен и никнеймов</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__content container">
+      <div class="header__title-group">
+        <a href="index.html" class="header__main-title">Генератор имен и никнеймов</a>
+        <span class="header__nextgen-title">NameGen</span> 
+      </div>
+      <nav class="header__nav">
+        <a href="namegen.html" class="header__nav-item">Генератор имен</a>
+        <a href="nicknamegen.html" class="header__nav-item">Генератор никнеймов</a>
+        <a href="saved.html" class="header__nav-item">Сохраненные</a>
+        <a href="about.html" class="header__nav-item">О сайте</a>
+        <button id="theme-toggle" class="theme-toggle">Переключить тему</button> 
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content container">
+    <section class="content-section">
+      <h1 class="content-section__title">Ваши сохраненные элементы</h1>
+      
+      
+      <p id="no-saved-message" class="content-section__paragraph content-section__paragraph--centered">
+       
+      </p>
+
+      <div id="saved-list" class="saved-list">
+       
+      </div>
+      
+      <div class="saved-actions" style="text-align: center; margin-top: 20px;">
+        <button id="clear-all-button" class="form__button form__button--danger">Очистить все</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Генератор имен и инкнеймов - NameGen. Все права защищены.</p>
+    </div>
+  </footer>
+
+ 
+  <script src="js/theme-manager.js" defer></script>
+  <script src="js/saved-items-manager.js" defer></script>
+  <script src="js/namegenerator.js" defer></script>
+  <script src="js/centercontrol.js" defer></script>
+</body>
+</html>

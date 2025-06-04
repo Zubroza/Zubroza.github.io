@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор Имен</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__content container">
+      <div class="header__title-group">
+        <a href="index.html" class="header__main-title">Генератор имен и никнеймов</a>
+        <span class="header__nextgen-title">NameGen</span> 
+      </div>
+      <nav class="header__nav">
+        <a href="namegen.html" class="header__nav-item">Генератор имен</a>
+        <a href="nicknamegen.html" class="header__nav-item">Генератор никнеймов</a>
+        <a href="saved.html" class="header__nav-item">Сохраненные</a>
+        <a href="about.html" class="header__nav-item">О сайте</a>
+        <button id="theme-toggle" class="theme-toggle">Переключить тему</button> 
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content container">
+    <h1 class="content-section__title">Генератор имен</h1>
+
+    <div class="generator-layout">
+      <div class="generator-layout__left-column">
+        <form id="generator-form" class="form">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Основные параметры:</legend>
+            <label class="form__label">
+              Длина: от
+              <input type="number" id="length-min" min="2" max="12" value="4" class="form__input form__input--inline">
+              до
+              <input type="number" id="length-max" min="3" max="15" value="8" class="form__input form__input--inline">
+            </label>
+            <label class="form__label">
+              Первая буква:
+              <input type="text" id="first-letter-input" maxlength="1" pattern="[A-Za-zА-Яа-я]" class="form__input">
+            </label>
+          </fieldset>
+
+          <fieldset id="lang-fieldset" class="form__fieldset">
+            <legend class="form__legend">Язык:</legend>
+            <label class="form__radio-label"><input type="radio" name="lang" value="eng" checked class="form__radio-input"> English</label>
+            <label class="form__radio-label"><input type="radio" name="lang" value="rus" class="form__radio-input"> Русский</label>
+          </fieldset>
+
+
+          <div id="nickname-settings" class="form__fieldset-group form__fieldset-group--hidden">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Настройки никнейма:</legend>
+              <p class="form__label">Регистр:</p>
+              <div class="form__radio-group">
+                <label class="form__radio-label"><input type="radio" name="register" value="uppercase" class="form__radio-input"> Заглавные</label>
+                <label class="form__radio-label"><input type="radio" name="register" value="lowercase" checked class="form__radio-input"> Строчные</label>
+                <label class="form__radio-label"><input type="radio" name="register" value="both" class="form__radio-input"> Смешанный</label>
+              </div>
+              
+              <p class="form__label">Дополнительно:</p>
+              <div class="form__checkbox-group">
+                <label class="form__checkbox-label"><input type="checkbox" id="numbers" class="form__checkbox-input"> Цифры</label>
+                <label class="form__checkbox-label"><input type="checkbox" id="specials" class="form__checkbox-input"> Спецсимволы</label>
+                <label class="form__checkbox-label"><input type="checkbox" id="smiles" class="form__checkbox-input"> Смайлы</label>
+              </div>
+
+              <label class="form__label">
+                Префикс:
+                <input type="text" id="prefix" placeholder="xX_" class="form__input">
+              </label>
+
+              <label class="form__label">
+                Суффикс:
+                <input type="text" id="suffix" placeholder="_Xx" class="form__input">
+              </label>
+            </fieldset>
+          </div>
+
+          <button type="submit" class="form__button">Генерировать</button>
+        </form>
+      </div>
+
+      <div class="generator-layout__right-column">
+        <h2 class="content-section__title">Результат:</h2>
+        <div id="result-container" class="result-container result-container--hidden">
+          <div id="result-output" class="result-output"></div>
+          <div class="result-actions">
+            <button id="copy-button" class="result-button">Копировать</button>
+            <button id="save-button" class="result-button">Сохранить</button>
+          </div>
+        </div>
+
+        <div id="api-info" class="api-info result-container--hidden">
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Генератор имен и никнеймов - NameGen. Все права защищены.</p>
+    </div>
+  </footer>
+
+  
+  <script src="js/theme-manager.js" defer></script>
+  <script src="js/saved-items-manager.js" defer></script>
+  <script src="js/namegenerator.js" defer></script>
+  <script src="js/centercontrol.js" defer></script>
+</body>
+</html>
